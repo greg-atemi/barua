@@ -1,0 +1,42 @@
+{% extends 'auth/auth_base.html' %}
+{% load static %}
+{% block title_block %}
+    <title>Login</title>
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block body_block %}
+
+    <body>
+        <div class="form">
+            <form method="post" action="/admission/login">
+
+                {% for message in messages %}
+                <div class="message">
+                    <h3>Message:</h3> {{ message }}
+                </div>
+                <br>
+                {% endfor %}
+
+                <h1> LOGIN </h1>
+                {% csrf_token %}
+                <div class="field">
+                    <label for="username"> YOUR USERNAME IS YOUR INDEX NUMBER</label>
+                    <label for="username"> FORMAT: XXXXXXXXXX/20XX  </label>
+                    <label for="username"> Username </label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="field">
+                    <label for="username"> YOUR PASSORD IS YOUR INDEX NUMBER</label>
+                    <label for="pass1"> Password </label>
+                    <input type="password" id="pass1" name="pass1" required>
+                </div>
+
+                <button type="submit" class="submit"> LOGIN </button>
+
+            </form>
+        </div>
+    </body>
+{% endblock %}
