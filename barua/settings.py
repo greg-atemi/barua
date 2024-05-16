@@ -28,7 +28,7 @@ AUTH_USER_MODEL = 'admission.Student'
 SECRET_KEY = 'django-insecure-&-6aava%_j##@g9r02_e6+=6s8rj$jwua-u+_l-5^4*otk9xin'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
