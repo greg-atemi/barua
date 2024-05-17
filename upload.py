@@ -11,7 +11,7 @@ data = pd.read_excel('EVENING.xlsx')
 driver = webdriver.Firefox()
 
 # Open the target website (replace with your Django application's URL)
-driver.get('http://64.23.160.238:85/admission/signup/')  # Change to your signup URL
+driver.get('http://127.0.0.1:8000/admission/signup')  # Change to your signup URL
 
 # Iterate through each row in the Excel file
 for index, row in data.iterrows():
@@ -108,7 +108,7 @@ for index, row in data.iterrows():
     # time.sleep(3)
     
     # Navigate back to the signup page for the next iteration
-    driver.get('http://64.23.160.238:85/admission/signup/')  # Change to your signup URL
+    driver.get('http://127.0.0.1:8000/admission/signup')  # Change to your signup URL
 
 # Close the browser
 driver.quit()
